@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+
+            .container {
+                margin: 0 auto 15px auto;
+                width: 70%;
+            }
+            
+            .input-container {
+                display: -ms-flexbox;
+                display: flex;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .icon {
+                padding: 10px;
+                background-color: dodgerblue;
+                color: white;
+                min-width: 50px;
+                text-align: center;
+            }
+
+            .input-field {
+                width: 100%;
+                padding: 10px;
+                outline: none;
+            }
+
+            .input-field:focus {
+                border: 1px solid dodgerblue;
+            }
+
+            .btn {
+                background-color: dodgerblue;
+                color: white;
+                width: 100%;
+                padding: 15px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.9;
+            }
+
+            .btn:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="form-content">
+                <h2>Registor Form</h2>
+
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" placeholder="Username" class="input-field" name="uname" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-envelope icon"></i>
+                    <input type="email" placeholder="Email" name="email" class="input-field" name="email" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" placeholder="Password" name="psw" class="input-field" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </body>
+</html>
