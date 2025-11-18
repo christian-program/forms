@@ -118,7 +118,7 @@
     <body>
         <button type="button" id="popup-modal">Sign up</button>
         <div class="modal">
-            <span class="close-modal">&times;</span>
+            <span id="close-modal" class="close-modal">&times;</span>
 
             <form action="#" method="post" class="modal-content">
                 <div class="container">
@@ -156,22 +156,26 @@
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelector('.popup-modal').onclick = function() {
+            document.addEventListener("DOMContentLoaded", function(){
+                document.querySelector('#popup-modal').onclick = () => {
                     document.querySelector('.modal').style.display = 'block';
                 }
 
-                document.querySelector('.close-modal').onclick = function() {
-                   document.querySelector('.modal').style.display = 'none'; 
+                document.querySelector('.cancelbtn').onclick = () => {
+                    document.querySelector('.modal').style.display = 'none';
                 }
 
-                window.onclick = event => {
+                document.getElementById('close-modal').onclick = function() {
+                    document.querySelector('.modal').style.display = 'none';
+                }
+
+                window.onclick = function(event){
                     if(event.target == document.querySelector('.modal')) {
-                        document.querySelector('.modal').style.display = 'none';
+                       document.querySelector('.modal').style.display = 'none'; 
                     }
                 }
 
-            });
+            })
         </script>
     </body>
 </html>
